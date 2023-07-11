@@ -12,7 +12,7 @@ const pages = new Array(data.length / SIZE).fill([])
 const fillTemplate = (body) => `
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="../index.css"></head>
+<head><link rel="stylesheet" href="../index.css"><script src="../play_audio.js"></script></head>
 <body>${body}</body>
 </html>
 `
@@ -25,7 +25,7 @@ const fillTemplate = (body) => `
 const makeTableRows = (records) =>
   records
     .map(record => {
-      return `<tr><td>${record.word}</td><td>${record.hiragana}</td><td>${record.translation}</td></tr>`
+      return `<tr onclick="play('${record.sounds}')"><td>${record.word}</td><td>${record.hiragana}</td><td>${record.translation}</td></tr>`
     })
 
 const makeTable = (rows) =>
