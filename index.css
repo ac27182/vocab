@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tbody>:nth-child(10n +1) {
+  background-color: #c8feee;
+}
+
+tr:hover {
+  background-color: #FEC8D8;
+  transition: none;
+}
+
+tr {
+  border: 1px;
+  border-color: rgb(1, 1, 1);
+  border-style: solid;
+
+  transition: 1s;
+}
+
+td {
+  border: 1px;
+  border-color: rgb(1, 1, 1);
+  border-style: solid;
+}
